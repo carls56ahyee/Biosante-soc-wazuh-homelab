@@ -22,7 +22,7 @@
 
 ---
 
-## 1. Contexte & Cas d'usage (« BioSanté »)
+## 1. Contexte & Cas d'usage (« BioSanté », entreprise ficitf)
 
 Ce homelab modélise le système d'information d'une PME française réaliste : le laboratoire d'analyses biologiques indépendant **BioSanté** (40 salariés, 1 technicien informatique unique, budget CAPEX logiciel nul).
 
