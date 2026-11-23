@@ -22,9 +22,9 @@
 
 ---
 
-## 1. Contexte & Cas d'usage (« BioSanté », entreprise ficitf)
+## 1. Contexte & Cas d'usage (« BioSanté »)
 
-Ce homelab modélise le système d'information d'une PME française réaliste : le laboratoire d'analyses biologiques indépendant **BioSanté** (40 salariés, 1 technicien informatique unique, budget CAPEX logiciel nul).
+Ce homelab modélise le système d'information d'une PME française fictif et réaliste : le laboratoire d'analyses biologiques indépendant **BioSanté** (40 salariés, 1 technicien informatique unique, budget CAPEX logiciel nul).
 
 ### Objectifs techniques du laboratoire
 1. **Faisabilité sous contrainte (H1)** : Faire cohabiter un hyperviseur bare-metal, un pare-feu segmenté, une plateforme SIEM/XDR Wazuh *All-in-One* et les machines cibles sur un unique mini-PC bureautique recyclé doté de **16 Go de RAM**.
