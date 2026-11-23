@@ -1,0 +1,4 @@
+## JVM configuration - Wazuh Indexer (/etc/wazuh-indexer/jvm.options)
+## VM Wazuh All-in-One : 8 Go RAM -> Heap limité à 50 % (4 Go)
+-Xms4g
+-Xmx4g

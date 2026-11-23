@@ -1,0 +1,11 @@
+<!-- Règle personnalisée BioSanté : détection de webshell PHP en DMZ (/var/ossec/etc/rules/local_rules.xml) -->
+<group name="local,syscheck,webshell,">
+  <rule id="100100" level="12">
+    <if_sid>554</if_sid>
+    <field name="file" type="pcre2">(?i)^/var/www/html/.+\.(php|phtml|php5)$</field>
+    <description>Possible webshell : fichier de script ajouté dans la racine web ($(file))</description>
+    <mitre>
+      <id>T1505.003</id>
+    </mitre>
+  </rule>
+</group>

@@ -1,0 +1,43 @@
+{
+  "agent": {
+    "id": "002",
+    "name": "Windows-Client",
+    "ip": "192.168.10.103"
+  },
+  "manager": {
+    "name": "biosante"
+  },
+  "rule": {
+    "id": "92066",
+    "level": 4,
+    "firedtimes": 1,
+    "mail": false,
+    "description": "C:\\Windows\\SysWOW64\\SecEdit.exe binary in a suspicious location launched by C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "groups": ["sysmon", "sysmon_eid1_detections", "windows"],
+    "mitre": {
+      "id": ["T1059.001"],
+      "technique": ["PowerShell"]
+    }
+  },
+  "data": {
+    "win": {
+      "system": {
+        "eventID": "1",
+        "channel": "Microsoft-Windows-Sysmon/Operational",
+        "providerName": "Microsoft-Windows-Sysmon",
+        "computer": "DESKTOP-89S4SBE",
+        "systemTime": "2026-10-19T16:35:44.6432870Z"
+      },
+      "eventdata": {
+        "utcTime": "2026-10-19 16:35:44.628",
+        "image": "C:\\Windows\\SysWOW64\\SecEdit.exe",
+        "commandLine": "\"C:\\Windows\\system32\\SecEdit.exe\" /export /cfg C:\\Windows\\TEMP/secexport.cfg",
+        "parentImage": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "parentCommandLine": "powershell \"$null = secedit /export /cfg $env:temp/secexport.cfg; $(gc $env:temp/secexport.cfg | Select-String \\\"LSAAnonymousNameLookup\\\").ToString().Split(\\\"=\\\")[1].Trim()\"",
+        "user": "AUTORITE NT\\Système",
+        "integrityLevel": "System",
+        "hashes": "SHA256=56CB815F0FDA92C4658296692E4F70DEE557137528482FE7A834296BFDB710C0"
+      }
+    }
+  }
+}
